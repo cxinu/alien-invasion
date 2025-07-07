@@ -26,14 +26,22 @@ class AlienInvasion:
             Check for keyboard and mouse events
             event.get returns a list of all the events that are currently in the event queue.
             """
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    sys.exit()
-            self.screen.fill(self.settings.bg_color)
-            self.ship.blitme()
+            self._check_events()
+            self._update_screen()
             """Make the most recently drawn screen visible"""
-            pygame.display.flip()
             self.clock.tick(60)
+
+    def _check_events(self):
+        """Respond to keypresses and events"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+
+    def _update_screen(self):
+        """Update the images on the screen, and flip to the new screen"""
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
