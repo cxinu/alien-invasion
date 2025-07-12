@@ -6,4 +6,5 @@ class Settings:
         """----------------Screen Settings-------------------"""
         self.screen_width = 1200
         self.screen_height = 800
-        self.bg_color = (96, 94, 102)
+        self.bg_color = (25, 23, 33)
+        self.ship_speed = 1.5
