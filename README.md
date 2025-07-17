@@ -1,7 +1,7 @@
 # Alien Invasion (Pygame Project)
 
 A small 2D game made using Python and Pygame.  
-This is a project from the book *Python Crash Course* that I built after about a week of learning Python.
+This is a project from the book _Python Crash Course_ that I built after about a week of learning Python.
 
 # 📷 Screenshot
 
@@ -15,7 +15,6 @@ This is a project from the book *Python Crash Course* that I built after about a
 
 The goal is to shoot down the incoming alien fleet before they reach the bottom or collide with your ship.
 
-
 # Installation
 
 1. Make sure you have Python (3.8 or above) installed.
@@ -28,5 +27,22 @@ cd alien-invasion
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
-python3 alien_invasion.py
+python3 main.py
 ```
+
+## Running in Browser (WASM)
+
+### prerequistes
+
+- pygame-ce
+- pygbag
+
+these should install with `pip install -r requirements.txt`
+
+### compile and serve
+
+```sh
+python3 -m pygbag .
+```
+
+this builds .html, .wasm, .apk in `build/` dir, and serves them in `localhost:8000`
