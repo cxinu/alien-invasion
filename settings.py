@@ -1,11 +1,20 @@
+import sys
+import platform
+
 class Settings:
     """This class stores all the settings for the alien invasion"""
 
     def __init__(self):
         """------------Iniitalize the game settings-------"""
         """----------------Screen Settings-------------------"""
-        self.screen_width = 1600
-        self.screen_height = 900
+        if sys.platform == "emscripten":
+            # Use browser window size
+            self.screen_width = platform.window.innerWidth
+            self.screen_height = platform.window.innerHeight
+        else:
+            # Default desktop resolution
+            self.screen_width = 1200
+            self.screen_height = 800
         self.bg_color = (25, 23, 33)
         self.ship_speed = 10.5
         self.ship_limit = 3

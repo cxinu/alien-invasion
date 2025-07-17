@@ -1,1 +1,3 @@
 pygame==2.6.1
+pygame-ce==2.5.5
+pygbag @ git+https://github.com/pygame-web/pygbag@328a3d4d3248bd6e93a8de433cd902e2393dd744
