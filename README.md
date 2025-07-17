@@ -23,7 +23,7 @@ The goal is to shoot down the incoming alien fleet before they reach the bottom 
 2. Clone this repository or download the ZIP.
 
 ```bash
-git clone https://github.com/your-username/alien-invasion.git
+git clone https://github.com/A-Knee09/alien-invasion.git
 cd alien-invasion
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
